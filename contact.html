@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us - Step In Shoes</title>
+  <!-- Link to the favicon (logo image for tab bar) -->
+  <link rel="icon" href="LogoSIN.png" type="image/png" />
+  
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet" /> <!-- Lobster font -->
+  
+  <!-- Link to Page-Specific Styles (Optional) -->
+  <link rel="stylesheet" href="contact.css"/>
+
+  <!-- Link to Global Stylesheet -->
+  <link rel="stylesheet" href="global.css"/>
+
+</head>
+
+<body>
+  <!-- Header with Home, Contact -->
+  <header>
+    <nav class="header-nav">
+      <div class="logo">
+        <a href="index.html">
+          <img src="LogoSIN.png" alt="Step Inn Shoes Logo" class="logo-img" />
+        </a>
+      </div>
+      <p class="store-name">Step Inn Shoes</p>
+
+      <!-- Hamburger icon for mobile view -->
+      <div class="hamburger-menu" id="hamburgerMenu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+
+      <!-- Navigation links -->
+      <div class="nav-links" id="navLinks">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Shop</a></li>
+          <li><a href="#About">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Contact Section -->
+  <section class="contact">
+    <h2>Contact Us</h2>
+    <p>We're happy to hear from you! Feel free to reach out to us through any of the following social media channels:</p>
+    
+    <div class="social-media-links">
+      <a href="https://www.facebook.com/people/Step-Inn-Shoes/100078668205748/" target="_blank">
+        <img src="facebook.png" alt="Facebook" class="social-icon" />
+        Facebook
+        <p class="c_text">Step Inn Shoes</p>
+      </a>
+      
+      <a href="https://wa.me/27621886345" target="_blank">
+        <img src="whatsapp.png" alt="WhatsApp" class="social-icon" />
+        WhatsApp
+        <p class="c_text">+1234567890</p>
+      </a>
+      <a href="tel:+27621886345" target="_blank">
+        <img src="phone.png" alt="Phone" class="social-icon" />
+        Call Us
+        <p class="c_text">+1234567890</p>
+      </a>
+      <a href="https://www.google.com/maps?q=Step+Inn+Shoes,+20+Failsworth+Rd,+Northdale,+Pietermaritzburg,+3201" target="_blank">
+        <img src="location.png" alt="Location" class="social-icon" />
+        Our Location
+        <p class="c_text">20 Failsworth Rd, Northdale,<br> Pietermaritzburg, 3201</p>
+      </a>
+    </div>
+  </section>
+
+<!-- Mini About Us Section -->
+<section id="About" class="about-us">
+  <div class="about-us-container">
+    <div class="about-us-img">
+      <img src="AboutUs.jpg" alt="Step Inn Shoes Storefront" />
+    </div>
+    <div class="about-us-text">
+      <h2>About Us</h2>
+      <p>At <strong>Step Inn Shoes</strong>, we offer a curated selection of stylish, high-quality footwear for men, women, and kids. Based in Pietermaritzburg, we’re proud to bring you great style at the best prices — step inn and find your perfect pair.</p>
+    </div>
+  </div>
+
+  <!-- Address below the flex row -->
+  <div class="about-us-address">
+    <p>📍 Visit us at:</p>
+    <address>
+      20 Failsworth Rd, Northdale,<br>
+      Pietermaritzburg, 3201
+    </address>
+  </div>
+</section>
+
+
+<!-- Footer -->
+<footer id="footer-placeholder"></footer>
+<script>
+  fetch('footer.html')
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById('footer-placeholder').innerHTML = html;
+    })
+    .catch(err => console.error('Error loading footer:', err));
+</script>
+  <script src="global.js"></script>
+</body>
+
+</html>

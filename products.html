@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Step In Shoes - Products</title>
+  <!-- Favicon -->
+  <link rel="icon" href="LogoSIN.png" type="image/png" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="global.css">
+  <link rel="stylesheet" href="products.css"/>
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet"/>
+
+</head>
+
+<body>
+  <header>
+    <nav class="header-nav">
+      <div class="logo">
+        <a href="index.html">
+          <img src="LogoSIN.png" alt="Step Inn Shoes Logo" class="logo-img" />
+        </a>
+      </div>
+      <p class="store-name">Step Inn Shoes</p>
+
+<!-- Hamburger icon for mobile view -->
+    <div class="hamburger-menu" id="hamburgerMenu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+
+<!-- Main navigation links -->
+    <div class="nav-links" id="navLinks">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Shop</a></li>
+        <li><a href="index.html#About">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    </nav>
+  </header>
+
+<!-- Main Navigation (Men and Women Links + Cart) -->
+<!-- Navigation for Men/Women -->
+    <div class="nav-links-container">
+      <ul class="nav-links">
+        <img src="point.png" alt="==>" class="point-img">
+        <li><a href="Products.html#men">Men</a></li>
+        <li><a href="Products.html#women">Women</a></li>
+        <li><a href="Products.html#kiddies">Kiddies</a></li>
+        <li><a href="Products.html#HomeEssentials">Home Essentials</a></li>
+      </ul>
+    </div>
+
+<!-- CART -->
+
+<!-- Cart moved to the extreme right -->
+    <div class="cart">
+      <a href="#" id="cart-toggle">
+        <img src="cart.png" alt="Cart Icon" class="cart-icon" />
+        <span id="cart-count" class="cart-count">0</span>
+      </a>
+    </div>
+
+<!-- Cart panel (hidden initially) -->
+    <div class="cart-panel" id="cartPanel">
+      <button id="closeCart" class="close-btn">&times;</button>
+      <h2>My Cart</h2>
+      <div id="cartItems"></div>
+      <p id="cartTotal">Total: R0</p>
+      <button id="checkout-btn">Checkout</button>
+    </div>
+  </section>
+
+  <!-- CATEGORY SECTION TEMPLATE -->
+  <!-- Men -->
+  <section id="men" class="category-section">
+    <button id="view-men-shoes-btn" class="view-btn">Click to View Men's Shoes</button>
+    <div class="filter-container" id="men-filters" style="display: none;">
+      <h3>Select a Category:</h3>
+      <button class="filter-btn" data-category="dress">Dress</button>
+      <button class="filter-btn" data-category="casual">Casual</button>
+      <button class="filter-btn" data-category="athletic">Athletic</button>
+      <button class="filter-btn" data-category="boots">Boots</button>
+      <button class="filter-btn" data-category="slides">Slides</button>
+      <button class="filter-btn" data-category="other">Other</button>
+      <button id="clear-men-filters" class="clear-filters">Clear Filters</button>
+    </div>
+    <div id="men-product-list" style="display: none;"></div>
+  </section>
+
+  <!-- Women -->
+  <section id="women" class="category-section">
+    <button id="view-women-shoes-btn" class="view-btn">Click to View Women's Shoes</button>
+    <div class="filter-container" id="women-filters" style="display: none;">
+      <h3>Select a Category:</h3>
+      <button class="filter-btn" data-category="dress">Dress</button>
+      <button class="filter-btn" data-category="casual">Casual</button>
+      <button class="filter-btn" data-category="athletic">Athletic</button>
+      <button class="filter-btn" data-category="boots">Boots</button>
+      <button class="filter-btn" data-category="slides">Slides</button>
+      <button class="filter-btn" data-category="other">Other</button>
+      <button id="clear-women-filters" class="clear-filters">Clear Filters</button>
+    </div>
+    <div id="women-product-list" style="display: none;"></div>
+  </section>
+
+  <!-- Kiddies -->
+  <section id="kiddies" class="category-section">
+    <button id="view-kiddies-shoes-btn" class="view-btn">Click to View Kiddies Shoes</button>
+    <div class="filter-container" id="kiddies-filters" style="display: none;">
+      <h3>Select a Category:</h3>
+      <button class="filter-btn" data-category="dress">Dress</button>
+      <button class="filter-btn" data-category="casual">Casual</button>
+      <button class="filter-btn" data-category="athletic">Athletic</button>
+      <button class="filter-btn" data-category="boots">Boots</button>
+      <button class="filter-btn" data-category="slides">Slides</button>
+      <button class="filter-btn" data-category="other">Other</button>
+      <button id="clear-kiddies-filters" class="clear-filters">Clear Filters</button>
+    </div>
+    <div id="kiddies-product-list" style="display: none;"></div>
+  </section>
+
+  <!-- Home Essentials -->
+  <section id="home-essentials" class="category-section">
+    <button id="view-home-essentials-btn" class="view-btn">Click to View Home Essentials</button>
+    <div class="filter-container" id="home-essentials-filters" style="display: none;">
+      <h3>Select a Category:</h3>
+      <button class="filter-btn" data-category="electrical">Electrical</button>
+      <button class="filter-btn" data-category="non_electrical">Non-Electrical</button>
+      <button id="clear-home-essentials-filters" class="clear-filters">Clear Filters</button>
+    </div>
+    <div id="home-essentials-product-list" style="display: none;"></div>
+  </section>
+
+  <!-- Floating WhatsApp Button -->
+  <button id="whatsappBtn" class="whatsapp-btn">
+    <img src="whatsapp.png" alt="WhatsApp Icon" class="whatsapp-btn-img" /> Chat with us on WhatsApp
+  </button>
+
+  <!-- Popup Modal (Hidden by default) -->
+  <div id="whatsappPopup" class="whatsapp-popup">
+    <div class="popup-content">
+      <span id="closePopup" class="wclose-btn">&times;</span>
+
+      <h2>Chat with us on WhatsApp</h2>
+      <a href="https://wa.me/11234567890?text=Hello%20I%20would%20like%20to%20know%20more%20about%20your%20products!" target="_blank">
+        <button class="whatsapp-popup-btn">Open WhatsApp</button>
+      </a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+<footer id="footer-placeholder"></footer>
+<script>
+  fetch('footer.html')
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById('footer-placeholder').innerHTML = html;
+    })
+    .catch(err => console.error('Error loading footer:', err));
+</script>
+
+  <!-- Scripts -->
+  <script src="global.js"></script>
+  <script src="products.js"></script>
+  <script src="cart.js"></script>
+</body>
+</html>

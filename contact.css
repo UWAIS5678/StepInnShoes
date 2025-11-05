@@ -1,0 +1,106 @@
+/* Contact Section */
+.contact {
+  padding: 40px;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.contact p {
+  font-size: 20px;
+  margin-bottom: 65px;
+}
+.c_text{
+  color: #3ca8e7;
+}
+.social-media-links {
+  display: flex; /* Use flexbox to align items horizontally */
+  justify-content: center; /* Center the items horizontally */
+  align-items: center; /* Vertically center the items */
+  gap: 90px; /* Space between each item (icon + text) */
+  margin-bottom: 50px; /* Add space below the row */
+}
+
+.social-media-links a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #333;
+  display: flex;
+  flex-direction: column; /* Stack the icon and text vertically */
+  align-items: center; /* Center both icon and text horizontally */
+  gap: 5px; /* Space between the icon and the text */
+  transition: color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease, text-shadow 0.3s ease; /* Smooth transitions */
+}
+
+.social-media-links a:hover {
+  color: #E73C7E; /* Hover color */
+  transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+/* Icon size */
+.social-icon {
+  width: 70px; /* Icon size */
+  height: 70px;
+  transition: opacity 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for opacity and box-shadow */
+}
+
+.social-text {
+  font-size: 18px; /* Text size for main text (WhatsApp, Facebook, etc.) */
+  font-weight: bold;
+  color: #333;
+  text-align: center; /* Center the text under the icon */
+}
+
+.social-details {
+  font-size: 16px; /* Font size for additional details */
+  color: #000000; /* Color for additional info */
+  margin-top: 5px; /* Space between text and additional info */
+  text-align: center; /* Center-align the details text */
+}
+
+@media (max-width: 600px) {
+  .contact {
+    padding: 20px 10px;
+  }
+
+  .contact h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+
+  .contact p {
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
+
+  .social-media-links {
+    display: flex;
+    flex-wrap: wrap;           /* Allow wrapping */
+    gap: 20px;                 /* Gap between items */
+    justify-content: center;   /* Center rows */
+    margin-bottom: 30px;
+  }
+
+  .social-media-links a {
+    flex: 0 1 45%;             /* Each link takes about half the width */
+    gap: 15px;                 /* Space between icon and text */
+    justify-content: flex-start;
+    font-size: 16px;
+  }
+
+  .social-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .social-text {
+    font-size: 16px;
+  }
+
+  .social-details {
+    font-size: 14px;
+  }
+}

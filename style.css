@@ -1,0 +1,265 @@
+/*==========================================================*/
+/* Featured Products Section */
+.products {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.products h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+/* Container for featured products */
+#featured-products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* Product Card */
+.product-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect */
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Product image */
+.product-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+/* Product title */
+.product-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin: 15px 0;
+}
+
+/* Product price */
+.product-card p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+/* Add to Cart button */
+.btn-add {
+  background-color: #E73C7E;
+  padding: 10px 20px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: auto;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-add:hover {
+  background-color: #333;
+}
+
+/*==========================================================*/
+/* Dropdowns inside product card (Refined for better sizing) */
+.dropdowns-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  margin: 8px 0;
+}
+
+.dropdown-top-label {
+  font-weight: 600;
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 12px;
+}
+
+.dropdown-selects {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+  justify-content: center;
+  height: 30px;
+}
+
+.dropdown-selects select {
+  flex: 1 1 100px;
+  padding: 6px 10px;           /* reduced padding */
+  font-size: 13px;             /* smaller font for compact look */
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #fafafa;
+  cursor: pointer;
+  appearance: none;            /* cleaner style */
+  text-align: center;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.dropdown-selects select:hover,
+.dropdown-selects select:focus {
+  border-color: #000000;
+  background-color: #fff;
+  outline: none;
+}
+
+/*=========================================================*/
+/* Mini About Us Section */
+.about-us {
+  padding: 50px 20px;
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.about-us-container {
+  display: flex;
+  max-width: 1000px;
+  margin: 0 auto;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.about-us-img {
+  flex: 1 1 100%;
+  max-width: 50%;
+  padding: 10px;
+}
+
+.about-us-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.about-us-text {
+  flex: 1 1 100%;
+  padding: 10px;
+  max-width: 50%;
+}
+
+.about-us-text h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.about-us-text p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.5;
+}
+
+.about-us-address {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 16px;
+  color: #666;
+}
+
+.about-us-address address {
+  font-style: normal;
+  line-height: 1.5;
+}
+
+/*=========================================================*/
+/* Responsive Adjustments */
+@media (max-width: 900px) {
+  .products h2 {
+    font-size: 28px;
+  }
+
+  #featured-products {
+    gap: 10px;
+  }
+
+  .product-card {
+    max-width: 45%;
+  }
+
+  .about-us-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-us-img, .about-us-text {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .products h2 {
+    font-size: 24px;
+  }
+
+  #featured-products {
+    flex-wrap: wrap;       /* Keep wrapping */
+    flex-direction: row;   /* Keep row direction */
+    justify-content: center;
+    gap: 10px;             /* Optional smaller gap */
+  }
+
+  .product-card {
+    width: 48%;            /* Two cards side-by-side */
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  /* Keep other styles unchanged */
+  .dropdown-selects {
+    flex-direction: column;
+    width: 100%;
+    gap: 6px;
+  }
+
+  .dropdown-selects select {
+    width: 100%;
+    font-size: 12.5px;
+    padding: 5px 8px;
+  }
+
+  .dropdowns-wrapper {
+    margin-bottom: 18px;
+  }
+
+  .btn-add {
+    font-size: 14px;
+    padding: 8px 16px;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .about-us-text h2 {
+    font-size: 20px;
+  }
+
+  .about-us-text p {
+    font-size: 14px;
+  }
+}

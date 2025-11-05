@@ -1,0 +1,341 @@
+/* Product Category Grid Layout */
+#men-product-list,
+#women-product-list,
+#kiddies-product-list,
+#home-essentials-product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); /* Creates a responsive grid */
+  gap: 20px; /* Space between items */
+  justify-items: center; /* Center items horizontally */
+  margin: 0 auto; /* Center grid container */
+  padding: 20px;
+}
+
+/* Product Cards */
+.product-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  visibility: visible; /* Default visibility */
+  opacity: 1; /* Full opacity by default */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Hover effects for product cards */
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Product Image */
+.product-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+/* Product Name */
+.product-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin: 15px 0;
+}
+
+/* Product Description */
+.product-card p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+/* Price and Add to Cart Button */
+.product-card .price {
+  font-size: 18px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.product-card .btn-add {
+  padding: 10px 20px;
+  background-color: #E73C7E;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/* Hover effect for add-to-cart button */
+.product-card .btn-add:hover {
+  background-color:#333;
+}
+
+/* Product Category Filter (Buttons) */
+.filter-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.filter-btn {
+  margin: 10px;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #f4f4f4;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.filter-btn:hover {
+  background-color: #333;
+}
+
+.clear-filters {
+  margin-top: 20px;
+  padding: 10px 15px;
+  background-color: #dc3545;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect for clear-filters button */
+.clear-filters:hover {
+  background-color: #333;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Mobile Devices (Up to 600px) */
+@media (max-width: 600px) {
+  #men-product-list,
+  #women-product-list,
+  #kiddies-product-list,
+  #home-essentials-product-list {
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 15px; /* Optional: adjust spacing */
+  }
+
+  .product-card {
+    padding: 15px;
+  }
+
+  .product-card h3 {
+    font-size: 16px;
+  }
+
+  .product-card p {
+    font-size: 14px;
+  }
+
+  .filter-btn,
+  .clear-filters {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+}
+
+
+/* Tablets (600px to 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  #men-product-list,
+  #women-product-list,
+  #kiddies-product-list,
+  #home-essentials-product-list {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* 2-3 columns */
+  }
+
+  .product-card {
+    padding: 20px;
+  }
+
+  .product-card h3 {
+    font-size: 17px;
+  }
+
+  .product-card p {
+    font-size: 15px;
+  }
+
+  .filter-btn,
+  .clear-filters {
+    font-size: 15px;
+    padding: 10px 15px;
+  }
+}
+
+/* Larger Screens (1024px and above) */
+@media (min-width: 1025px) {
+  #men-product-list,
+  #women-product-list,
+  #kiddies-product-list,
+  #home-essentials-product-list {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); /* 4-5 columns */
+  }
+
+  .filter-btn,
+  .clear-filters {
+    font-size: 16px;
+    padding: 12px 18px;
+  }
+}
+
+/* Product Category Section */
+.category-section {
+  margin: 40px 0;
+  text-align: center;
+}
+
+.category-section .view-btn {
+  padding: 20px 30px; /* Adjust padding to control the height and width */
+  font-size: 18px;
+  cursor: pointer;
+  border: none;
+  background-color: #E73C7E;
+  color: white;
+  border-radius: 5px;
+  transition: background-color 0.5s;
+
+  /* Optional: Ensure uniform size for all buttons */
+  width: 650px; /* You can adjust the width here */
+  height: 60px; /* You can adjust the height here */
+  text-align: center; /* Center text horizontally */
+  display: inline-block; /* Ensures button respects width/height settings */
+}
+
+.category-section .view-btn:hover {
+  background-color: #333;
+}
+
+.filter-container {
+  margin: 20px 0;
+}
+
+.filter-btn {
+  margin: 10px;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #f4f4f4;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition-duration: 0.5s;
+}
+
+.filter-btn:hover {
+  color: #fff;
+  background-color: #333;
+}
+
+.clear-filters {
+  margin-top: 20px;
+  padding: 10px 15px;
+  background-color: #dc3545;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition-duration: 0.5s;
+}
+
+.clear-filters:hover {
+  background-color: #333;
+}
+
+/*==========================================*/
+/* Dropdowns for size and color */
+
+/* Dropdowns inside product card (Refined for better sizing) */
+/*==========================================================*/
+/* Dropdowns inside product card (Refined for better sizing & spacing) */
+.dropdowns-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;                   /* slightly more space between dropdowns */
+  margin: 10px 0 15px 0;      /* added bottom margin to avoid overlap */
+}
+
+.dropdown-top-label {
+  font-weight: 600;
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 6px;
+}
+
+.dropdown-selects {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+  justify-content: center;
+  height: 32px;
+}
+
+.dropdown-selects select {
+  flex: 1 1 100px;
+  padding: 6px 10px;
+  font-size: 13px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #fafafa;
+  cursor: pointer;
+  appearance: none;
+  text-align: center;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.dropdown-selects select:hover,
+.dropdown-selects select:focus {
+  border-color: #000;
+  background-color: #fff;
+  outline: none;
+}
+
+/* Add to Cart spacing fix */
+.btn-add {
+  margin-top: 10px;           /* adds extra space above the button */
+  background-color: #E73C7E;
+  padding: 10px 20px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+/*==========================================*/
+
+/* Stack dropdowns vertically on small screens */
+@media (max-width: 600px) {
+  .dropdown-selects {
+    flex-direction: column;
+  }
+
+  .dropdown-selects select {
+    width: 100%;
+  }
+
+  .category-section .view-btn {
+    width: 80%;
+
+  }
+}
